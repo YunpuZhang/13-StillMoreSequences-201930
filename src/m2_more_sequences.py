@@ -12,7 +12,7 @@ for ITERATING through SEQUENCES, including selections from:
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
          and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -79,6 +79,11 @@ def run_test_shortest_string():
 
 
 def shortest_string(strings):
+    k_of_short=0
+    for k in range(len(strings)):
+        if len(strings[k])<len(strings[k_of_short]):
+            k_of_short=k
+    return strings[k_of_short]
     """
     What comes in:
       -- a non-empty sequence of strings
@@ -104,7 +109,7 @@ def shortest_string(strings):
       :type strings: list[str]   or tuple(str)
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # -------------------------------------------------------------------------
 
@@ -150,6 +155,12 @@ def run_test_index_of_largest_number():
 
 
 def index_of_largest_number(numbers, n):
+    k_of_max=0
+    for k in range(n):
+        if numbers[k]>numbers[k_of_max]:
+            k_of_max=k
+    return (k_of_max)
+
     """
     What comes in:
       -- a sequence of numbers
@@ -181,7 +192,7 @@ def index_of_largest_number(numbers, n):
 
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # -------------------------------------------------------------------------
 
@@ -219,6 +230,9 @@ def run_test_number_of_stutters():
 
 
 def number_of_stutters(s):
+    for k in range(len(s)-1):
+        if s[k]=s[k+1]:
+
     """
     What comes in:
       -- a string s
